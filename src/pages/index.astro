@@ -1,15 +1,121 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import data from "../lib/data/services.json";
+import { slug } from "../lib/util.js";
+
+const links = data.map(({ title }) => [title, slug(title)]);
+const services = data.filter((service) => !service.isProject);
+const projects = data.filter((service) => service.isProject);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <header class="primary-header">
+    <div class="container">
+      <nav class="primary-navigation">
+        <input
+          type="checkbox"
+          checked
+          aria-hidden="true"
+          class="navigation-toggle"
+        />
+        <div class="links-close">
+          <a href="/" class="brand">Metering</a>
+          <menu class="links">
+            {
+              links.map(([title, slug]) => (
+                <li>
+                  <a href={`#${slug}`}>{title}</a>
+                  </li>
+                  ))
+                }
+          </menu>
+          <button class="hamburger-close">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+        <div class="links-open">
+          <a href="/" class="brand">Metering</a>
+          <button class="hamburger-open">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+      <div>
+        <h1 class="title">Metering Information System</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+    <header class="container">
+      <p>Please choose a service which you would like to commence.</p>
+    </header>
+    {
+      services.map((service) => (
+        <article>
+          <div class="container">
+            <section id={slug(service.title)} class="service">
+              <h2 class="title">{service.title}</h2>
+              <ul class="list">
+                {service.activities.map(({ title, description, url }) => (
+                  <li>
+                    <Card title={title} description={description} url={url} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+        </article>
+      ))
+    }
+    <div class="projects">
+      {
+        projects.map((project) => (
+          <article id={slug(project.title)} class="project container">
+            <div>
+              <h2 class="title">{project.title}</h2>
+              {project.description && <p>{project.description}</p>}
+            </div>
+            <ul class="list">
+              {project.activities.map(({ title, url }) => (
+                <li>
+                  <a href={url} target="_blank">{title}</a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </main>
+  <footer class="primary-footer">
+    &copy; Copywright 2023. All rights reserved.
+  </footer>
+</BaseLayout>
+
+<script>
+  const toggle = document.querySelector(".navigation-toggle");
+  const toggleButtons = document.querySelectorAll(
+    ".brand ~ button"
+  );
+
+  const navLinks = document.querySelectorAll(".primary-navigation a");
+
+  function toggleMenu() {
+    //@ts-ignore
+    toggle.checked = !toggle.checked;
+  }
+
+  toggleButtons.forEach((b) => b.addEventListener("click", toggleMenu));
+  navLinks.forEach((link) => link.addEventListener('click', toggleMenu));
+</script>
+
+<style>
+  main > header {
+    padding-block: var(--size-400);
+    text-align: center;
+  }
+</style>

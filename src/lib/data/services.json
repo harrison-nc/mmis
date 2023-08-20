@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Main Activities",
+    "isProject": false,
+    "description": "",
+    "activities": [
+      {
+        "title": "Installation",
+        "description": "Meter installation for existing or new customers.",
+        "url": "https://forms.gle/x1svohcUYNhjELqb8"
+      },
+      {
+        "title": "Replacement",
+        "description": "Meter replacement for existing customers. Including retrieval of existing meter.",
+        "url": "https://forms.gle/zBnuqGToVC222kZSA"
+      },
+      {
+        "title": "Maintenance",
+        "description": "Meter accessory maintenance e.g. CT, VT, Cables, etc.",
+        "url": "https://forms.gle/YBx6JR761FV2NfVBA"
+      },
+      {
+        "title": "Recertification",
+        "description": "Meter recertification for existing customers. Including load and voltage readings.",
+        "url": "https://forms.gle/NJqGan4oHrUZe3Wg7"
+      }
+    ]
+  },
+  {
+    "title": "IHS",
+    "isProject": true,
+    "description": "Special project for installation and maintenance of a meter in IHS sites.",
+    "activities": [
+      {
+        "title": "Installation",
+        "description": "Meter installation for IHS",
+        "url": "https://forms.gle/C7GzzrsVfW1RSQhn6"
+      },
+      {
+        "title": "Maintenance",
+        "description": "Meter accessories maintenance for IHS",
+        "url": "https://forms.gle/ceiqruRJQjMx1yMd6"
+      },
+      {
+        "title": "Replacement",
+        "description": "Meter replacement for IHS",
+        "url": "https://forms.gle/gBdsk8pX5Ku6eB2g9"
+      }
+    ]
+  },
+  {
+    "title": "ATC",
+    "isProject": true,
+    "description": "Special project for installation and maintenance of a meter for ACT sites.",
+    "activities": [
+      {
+        "title": "Installation",
+        "description": "Meter installation for ATC",
+        "url": "https://forms.gle/tmsZ7PVEA2CRfTbQ8"
+      },
+      {
+        "title": "Replacement",
+        "description": "Meter replacement for ATC",
+        "url": "https://forms.gle/SzFp18xPZJCBhmzXA"
+      },
+      {
+        "title": "Maintenance",
+        "description": "Meter maintenance for ATC",
+        "url": "https://forms.gle/tCZojSZWZA9AK3ii9"
+      }
+    ]
+  },
+  {
+    "title": "DTR",
+    "isProject": true,
+    "activities": [
+      {
+        "title": "Installation",
+        "description": "Meter installation on PHED distribution transformers.",
+        "url": "https://forms.gle/ZxcrAY84Xbjc2zgR6"
+      },
+      {
+        "title": "Maintenance",
+        "description": "Meter accessory maintenance on PHED distribution transformers.",
+        "url": "https://forms.gle/BDvt2PkBnpSzVxws9"
+      },
+      {
+        "title": "Replacement",
+        "description": "Meter replacement on PHED distribution transformers.",
+        "url": "https://forms.gle/8ago6xxVEHkXQkgw7"
+      }
+    ]
+  },
+  {
+    "title": "Customer Support",
+    "isProject": true,
+    "activities": [
+      {
+        "title": "Log Customer Request",
+        "description": "",
+        "url": "https://forms.gle/XVRrt76KRULXXRH47"
+      },
+      {
+        "title": "Log Received Meter",
+        "description": "",
+        "url": "https://forms.gle/hZk5mVKzWsS3ruYj9"
+      }
+    ]
+  }
+]
