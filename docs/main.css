@@ -33,6 +33,10 @@
   box-sizing: inherit;
 }
 
+body {
+  background-color: var(--clr-neutral-100);
+}
+
 a {
   text-decoration: none;
 }
@@ -48,6 +52,11 @@ main {
 
 main a {
   color: var(--clr-accent-orange);
+}
+
+main > header {
+  padding-block: var(--size-400);
+  text-align: center;
 }
 
 h1,
@@ -287,6 +296,17 @@ h2 {
 .project .list,
 .primary-navigation .links {
   list-style: none;
+}
+
+.card {
+  padding: var(--size-100);
+  border: 2px solid var(--clr-accent-blue);
+  border-radius: 5px;
+  text-align: center;
+  height: 100%;
+  display: grid;
+  gap: 0;
+  place-items: center;
 }
 
 .title {
