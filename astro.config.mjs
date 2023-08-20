@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://harrison-nc.github.io',
   base: '/mmis',
+  outDir: "./docs"
 })
