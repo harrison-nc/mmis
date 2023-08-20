@@ -6,16 +6,3 @@ const { title, description, url } = Astro.props;
   <strong><a href={url} target="_blank">{title}</a></strong>
   <p>{description}</p>
 </div>
-
-<style>
-  .card {
-    padding: var(--size-100);
-    border: 2px solid var(--clr-accent-blue);
-    border-radius: 5px;
-    text-align: center;
-    height: 100%;
-    display: grid;
-    gap: 0;
-    place-items: center;
-  }
-</style>
