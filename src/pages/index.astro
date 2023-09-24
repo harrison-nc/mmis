@@ -1,15 +1,30 @@
 ---
+import BaseLayout from "../layouts/pico.astro";
+import Card from "../components/card.astro";
+import { groupedActions } from "../lib/actions";
+
+const records = groupedActions;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <header class="container">
+    <h1>Metering Record Book</h1>
+  </header>
+  <section class="container">
+    {
+      records.map(([type, action]) => (
+        <Card heading="h2" title={type} items={action} />
+      ))
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  :root {
+    --color-title: ;
+  }
+
+  h1{
+    color: var(--color-title);
+  }
+</style>

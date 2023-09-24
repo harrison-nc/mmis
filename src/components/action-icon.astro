@@ -1,0 +1,31 @@
+---
+import type { ActionName } from '../types'
+import { Icon } from "astro-icon";
+
+interface Props {
+  action: ActionName;
+}
+
+const { action } = Astro.props;
+
+let icon = "ant-design:form-outlined";
+
+if (action === 'installation')
+  icon = "carbon:meter-alt";
+else if (action === 'customer_request')
+  icon = "fluent:person-support-16-regular";
+else if (action === 'inspection')
+  icon = "carbon:inspection";
+else if (action === 'maintenance')
+  icon = "mdi:scheduled-maintenance";
+else if (action === 'replacement')
+  icon = "tabler:replace";
+else if (action === 'received_meter')
+  icon = "carbon:delivery-parcel"
+else if (action === 'recertification')
+  icon = "mdi:white-balance-incandescent"
+
+console.log(action, icon);
+---
+
+<Icon width="96" name={icon} />

@@ -1,0 +1,71 @@
+---
+import type { ActionName, Action } from "../types";
+import { Icon } from "astro-icon";
+import ActionIcon from "./action-icon.astro";
+
+interface Props {
+  title: ActionName;
+  items: Action[];
+  heading: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+const { title, items, heading: Heading } = Astro.props;
+---
+
+<article class="card">
+  <ActionIcon action={title} />
+  <Heading>{title.replace("_", " ")}</Heading>
+  <ul role="list">
+    {
+      items.map((item) => (
+        <li>
+          <Icon width="20" name="simple-line-icons:check" />
+          {item.title}
+        </li>
+      ))
+    }
+  </ul>
+  <button>Add</button>
+</article>
+
+<style>
+  :root {
+    --color-icon: hsl(121, 65%, 51%);
+    --color-card-title: hsl(121, 70%, 71%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-card-title);
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  svg {
+    color: var(--color-icon);
+  }
+
+  ul {
+    padding-inline: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+  }
+
+  article {
+    display: grid;
+    gap: 1rem;
+  }
+</style>

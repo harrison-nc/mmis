@@ -1,0 +1,12 @@
+ul[role=list] li,
+ol[role=list] li,
+menu[role=list] li {
+  list-style: none;
+}
+
+
+/* Utilities */
+
+.container {
+  padding-inline: 1rem;
+}
