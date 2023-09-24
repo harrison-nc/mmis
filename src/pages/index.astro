@@ -20,11 +20,30 @@ const records = groupedActions;
 </BaseLayout>
 
 <style>
-  :root {
-    --color-title: ;
+  header {
+    --color-heading: hsl(0, 0%, 100%, 0.4);
   }
 
   h1{
-    color: var(--color-title);
+    color: var(--color-heading);
+  }
+
+  header {
+    text-align: center;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: minmax(320px, 480px);
+    grid-auto-rows: max-content;
+    gap: 3rem;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  @media (min-width: 800px) {
+    section {
+      grid-template-columns: repeat(auto-fill, 320px);
+    }
   }
 </style>
