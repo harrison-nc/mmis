@@ -1,0 +1,21 @@
+{
+  "id": "ihs",
+  "title": "IHS",
+  "actions": [
+    {
+      "action": "installation",
+      "title": "IHS Meter Installation",
+      "url": "https://forms.gle/C7GzzrsVfW1RSQhn6"
+    },
+    {
+      "action": "maintenance",
+      "title": "IHS Meter Maintenance",
+      "url": "https://forms.gle/ceiqruRJQjMx1yMd6"
+    },
+    {
+      "action": "replacement",
+      "title": "IHS Meter Replacement",
+      "url": "https://forms.gle/gBdsk8pX5Ku6eB2g9"
+    }
+  ]
+}

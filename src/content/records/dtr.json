@@ -1,0 +1,21 @@
+{
+  "id": "dtr",
+  "title": "DTR Metering",
+  "actions": [
+    {
+      "action": "installation",
+      "title": "DTR Meter Installation",
+      "url": "https://forms.gle/ZxcrAY84Xbjc2zgR6"
+    },
+    {
+      "action": "maintenance",
+      "title": "DTR Meter Maintenance",
+      "url": "https://forms.gle/BDvt2PkBnpSzVxws9"
+    },
+    {
+      "action": "replacement",
+      "title": "DTR Meter Replacement",
+      "url": "https://forms.gle/8ago6xxVEHkXQkgw7"
+    }
+  ]
+}

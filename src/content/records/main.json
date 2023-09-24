@@ -1,0 +1,26 @@
+{
+  "id": "main",
+  "title": "Daily Activity",
+  "actions": [
+    {
+      "action": "installation",
+      "title": "Daily Installation",
+      "url": "https://forms.gle/x1svohcUYNhjELqb8"
+    },
+    {
+      "action": "maintenance",
+      "title": "Daily Maintenance",
+      "url": "https://forms.gle/YBx6JR761FV2NfVBA"
+    },
+    {
+      "action": "replacement",
+      "title": "Daily Replacement",
+      "url": "https://forms.gle/zBnuqGToVC222kZSA"
+    },
+    {
+      "action": "recertification",
+      "title": "Daily Recertification",
+      "url": "https://forms.gle/NJqGan4oHrUZe3Wg7"
+    }
+  ]
+}
