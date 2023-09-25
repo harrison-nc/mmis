@@ -11,8 +11,49 @@ import "../styles/default.css";
   <title>Astro</title>
 </head>
 <body>
+  <header class="main-header">
+    <p role="presentation">Metering record book</p>
+  </header>
   <main>
     <slot/>
   </main>
 </body>
 </html>
+
+<style>
+  body {
+    --header-height: 86px;
+  }
+  
+  header {
+    height: 86px;
+    position: fixed;
+    inset: 0;
+    background-color: inherit;
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);  
+  }
+
+  header {
+    display: grid;
+    align-items: center;
+  }
+
+  header > :first-child {
+    color: var(--color-heading);
+    padding: 0;
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 0.3ch;
+  }
+  
+  main {
+    margin-block-start: var(--header-height);
+  }
+  
+  .main-header {
+    padding: 0 3em;
+    text-transform: lowercase;
+  }
+</style>

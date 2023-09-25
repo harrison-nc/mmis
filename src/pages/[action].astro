@@ -3,7 +3,6 @@ import { actionNames, groupedActions } from "../lib/actions";
 import { Icon } from "astro-icon";
 import type { Action, ActionName } from "../types";
 import Layout from "../layouts/pico.astro";
-import Header from "../components/header.astro";
 import ActionIcon from "../components/action-icon.astro";
 
 export function getStaticPaths() {
@@ -20,7 +19,6 @@ const actions = action && grouped.get(action as ActionName);
 ---
 
 <Layout>
-  <Header />
   <section class="container">
     <article>
       <ActionIcon action={action as ActionName} />

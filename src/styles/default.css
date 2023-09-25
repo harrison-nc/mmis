@@ -2,10 +2,10 @@
   --color-heading: hsl(207, 55%, 30%);
   --color-icon: hsl(121, 65%, 51%);
   --color-title: hsl(121, 70%, 71%);
+  --color-navbar: var(--color-heading);
 
   --fw-bold: bold;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
