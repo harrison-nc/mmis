@@ -10,12 +10,14 @@ interface Props {
 }
 
 const { title, items, heading: Hn } = Astro.props;
+
+const titleUrl = title.replace(" ", "_");
 ---
 
 <article class="card">
   <ActionIcon action={title} />
   <Hn>
-    <a href="">{title.replace("_", " ")}</a>
+    <a href={titleUrl}>{title.replace("_", " ")}</a>
   </Hn>
   <ul role="list">
     {
@@ -27,14 +29,11 @@ const { title, items, heading: Hn } = Astro.props;
       ))
     }
   </ul>
-  <button>Add</button>
+  <a href={titleUrl} role="button">Add</a>
 </article>
 
 <style>
   article {
-    --color-icon: hsl(121, 65%, 51%);
-    --color-title: hsl(121, 70%, 71%);
-
     display: grid;
     gap: 1rem;
     margin: 0;
@@ -44,10 +43,6 @@ const { title, items, heading: Hn } = Astro.props;
     article {
       --color-title: hsl(121, 50%, 51%);
     }
-  }
-
-  a {
-    color: inherit;
   }
 
   h1,
@@ -75,9 +70,8 @@ const { title, items, heading: Hn } = Astro.props;
     gap: 0.5rem;
   }
 
-  button {
+  [role=button] {
     text-transform: uppercase;
     font-weight: var(--fw-bold);
-    max-height: 50px;
   }
 </style>

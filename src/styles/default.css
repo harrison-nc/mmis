@@ -1,3 +1,24 @@
+:root {
+  --color-heading: hsl(207, 55%, 30%);
+  --color-icon: hsl(121, 65%, 51%);
+  --color-title: hsl(121, 70%, 71%);
+
+  --fw-bold: bold;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-heading: hsl(196, 95%, 32%);
+  }
+}
+
+ul[role=list],
+ol[role=list],
+menu[role=list] {
+  padding-inline: 0;
+}
+
 ul[role=list] li,
 ol[role=list] li,
 menu[role=list] li {

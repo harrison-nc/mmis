@@ -1,0 +1,69 @@
+---
+import { actionNames, groupedActions } from "../lib/actions";
+import { Icon } from "astro-icon";
+import type { Action, ActionName } from "../types";
+import Layout from "../layouts/pico.astro";
+import Header from "../components/header.astro";
+import ActionIcon from "../components/action-icon.astro";
+
+export function getStaticPaths() {
+  const params = [...actionNames]
+    .map((action) => ({ action }))
+    .map((action) => ({ params: action }));
+
+  return params;
+}
+
+const { action } = Astro.params;
+const grouped = new Map<ActionName, Action[]>(groupedActions);
+const actions = action && grouped.get(action as ActionName);
+---
+
+<Layout>
+  <Header />
+  <section class="container">
+    <article>
+      <ActionIcon action={action as ActionName} />
+      <h1>{action}</h1>
+      <ul role="list">
+        {
+          actions &&
+            actions.map((action) => (
+              <li>
+                <a href={action.url} role="button" class="outline">
+                  <Icon width="24" name="codicon:arrow-right" />
+                  {action.title}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    text-transform: capitalize;
+    color: var(--color-heading);
+  }
+
+  ul {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1em;
+  }
+
+  li {
+    display: contents;
+  }
+
+  a[role=button] {
+    text-align: left;
+  }
+
+  a[role=button] {
+    display: flex;
+    gap: 3em;
+  }
+</style>
