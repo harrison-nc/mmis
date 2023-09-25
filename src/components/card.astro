@@ -40,6 +40,12 @@ const { title, items, heading: Hn } = Astro.props;
     margin: 0;
   }
 
+  @media (prefers-color-scheme: light) {
+    article {
+      --color-title: hsl(121, 50%, 51%);
+    }
+  }
+
   a {
     color: inherit;
   }
