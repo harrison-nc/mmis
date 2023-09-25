@@ -3,13 +3,13 @@
   "title": "Customer Support",
   "actions": [
     {
-      "action": "customer_request",
-      "title": "Add A Customer Request",
+      "action": "customer_support",
+      "title": "Add a Customer Request",
       "url": "https://forms.gle/XVRrt76KRULXXRH47"
     },
     {
-      "action": "received_meter",
-      "title": "Add A Received Meter",
+      "action": "customer_support",
+      "title": "Add a Received Meter",
       "url": "https://forms.gle/hZk5mVKzWsS3ruYj9"
     }
   ]

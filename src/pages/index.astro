@@ -28,10 +28,6 @@ const records = groupedActions;
     color: var(--color-heading);
   }
 
-  header {
-    text-align: center;
-  }
-
   section {
     display: grid;
     grid-template-columns: minmax(320px, 480px);
@@ -43,7 +39,7 @@ const records = groupedActions;
   
   @media (min-width: 800px) {
     section {
-      grid-template-columns: repeat(auto-fill, 320px);
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
   }
 </style>

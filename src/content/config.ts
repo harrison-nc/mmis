@@ -6,7 +6,7 @@ export const actionNameSchema = z.enum([
   "replacement",
   "recertification",
   "inspection",
-  "customer_request",
+  "customer_support",
   "received_meter"
 ]);
 
